@@ -1,7 +1,7 @@
 const fs = require('fs');
 const csv = require('csv-parser');
 
-const filePath = '/path/to/your/csv/file.csv';
+const filePath = './CSVexample.csv';
 
 fs.createReadStream(filePath)
     .pipe(csv())
@@ -11,3 +11,5 @@ fs.createReadStream(filePath)
     .on('end', () => {
         console.log('CSV file successfully processed.');
     });
+
+    
